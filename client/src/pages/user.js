@@ -33,7 +33,7 @@ export default function User() {
       username,
     };
     console.log(user);
-      axios.post("http://localhost:5001/users/add", user)
+      axios.post("https://fithub-samarth-ks-projects.vercel.app/users/add", user)
   .then((res) => console.log(res.data))
   .catch((error) => console.error("Error creating user:", error));
 

@@ -19,7 +19,7 @@ export default function Exercises() {
 
   React.useEffect(() => {
     axios
-      .get("http://localhost:5001/users/")
+      .get("https://fithub-samarth-ks-projects.vercel.app/users")
       .then((response) => {
         if (response.data.length > 0) {
           setUsers(response.data.map((user) => user.username));
@@ -59,7 +59,7 @@ export default function Exercises() {
 
     axios
       .post(
-        "http://localhost:5001/exercises/add",
+        "https://fithub-samarth-ks-projects.vercel.app//exercises/add",
         exercise
       )
       .then((res) => console.log(res.data));
