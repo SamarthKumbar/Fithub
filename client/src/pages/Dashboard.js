@@ -62,7 +62,7 @@ const Dashboard = () => {
 
   React.useEffect(() => {
     axios
-      .get("https://fithub-samarth-ks-projects.vercel.app/exercises/")
+      .get("https://fithub-2.onrender.com/exercises/")
       .then((response) => {
         setExercises(response.data);
       })
@@ -73,7 +73,7 @@ const Dashboard = () => {
 
   const deleteExercise = (id) => {
     axios
-      .delete("https://fithub-samarth-ks-projects.vercel.app/exercises/" + id)
+      .delete("https://fithub-2.onrender.com/exercises/" + id)
       .then((response) => {
         console.log(response.data);
         setExercises(exercises.filter((el) => el._id !== id));
@@ -85,7 +85,7 @@ const Dashboard = () => {
 
   const handleUpdate = (id, updatedExercise) => {
     axios
-      .post(`https://fithub-samarth-ks-projects.vercel.app/exercises/update/${id}`, updatedExercise)
+      .post(`https://fithub-2.onrender.com/exercises/update/${id}`, updatedExercise)
       .then((response) => {
         console.log("Exercise updated:", response.data);
         // Optionally, you can update the state or perform any other actions

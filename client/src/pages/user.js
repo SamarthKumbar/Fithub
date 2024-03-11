@@ -8,6 +8,7 @@ import Link from "@material-ui/core/Link";
 import Paper from "@material-ui/core/Paper";
 import axios from "axios";
 
+
 export default function User() {
   function Copyright() {
     return (
@@ -33,7 +34,7 @@ export default function User() {
       username,
     };
     console.log(user);
-      axios.post("https://fithub-samarth-ks-projects.vercel.app/users/add", user)
+      axios.post("https://fithub-2.onrender.com/users/add", user)
   .then((res) => console.log(res.data))
   .catch((error) => console.error("Error creating user:", error));
 
